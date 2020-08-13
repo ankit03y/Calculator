@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h1>Calc</h1>
+
+<form action="/calculator" method="POST">
+    <input type="text" placeholder="First number" name="a">
+    <input type="text" placeholder="Second number" name="b">
+    <input type="submit" class="button" name="operation" value="+"/>
+    <input type="submit" class="button" name="operation" value="-"/>
+    <input type="submit" class="button" name="operation" value="*"/>
+    <input type="submit" class="button" name="operation" value="/"/>
+</form>
+
+Answer is:
+<div th:if= "${operationModel != null}">
+    <div th:text="${operationModel.getC()}">Answer </div>
+</div>
+
+</body>
+</html>

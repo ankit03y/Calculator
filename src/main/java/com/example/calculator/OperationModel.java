@@ -5,7 +5,7 @@ public class OperationModel {
     private String operation;
     private int a;
     private int b;
-    private int c;
+    private double c;
 
     public OperationModel() {
     }
@@ -48,11 +48,11 @@ public class OperationModel {
         this.operation = operation;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
 
-    public void setC(int c) {
+    public void setC(double c) {
         this.c = c;
     }
 }
